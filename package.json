@@ -3,22 +3,21 @@
   "description": "WebDriver API Implementation based on the chrome.debugger API",
   "version": "0.0.0",
   "type": "module",
-  "main": "index.ts",
   "scripts": {
-    "build": "echo 'Done'",
-    "start": "ts-node index.ts",
-    "dev": "yarn && nodemon --watch src index.ts",
-    "eslint" : "eslint ."
+    "build": "vite build",
+    "start": "node ./dist/index.js",
+    "dev": "vite build --mode development --watch --emptyOutDir --ssr index",
+    "test": "vitest"
   },
   "dependencies": {
     "typescript": "^5.3.2",
-    "ts-node": "^10.9.1"
+    "vite": "^5.0.3"
   },
   "author": "Mikhail Kotelnikov <mikhail.kotelnikov@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
-    "@types/node": "18",
+    "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
     "eslint": "^8.54.0",
@@ -26,6 +25,6 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-promise": "^6.1.1",
-    "nodemon": "^3.0.1"
+    "vitest": "^0.34.6"
   }
 }
